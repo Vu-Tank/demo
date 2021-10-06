@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div id="loginScreen">
+        <button id="login" > login With google</button>
+    </div>
+    <div id="LogoutScreen">
+        <button id="logout">Logout</button>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase.js"></script> -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+        import { GoogleAuthProvider,getAuth,signInWithPopup   } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // const firebaseConfig = {
+        //   apiKey: "AIzaSyCuYCEWTE5b9fNyLVbRRLM57GD-My79h-Y",
+        //   authDomain: "donationfb-1f4de.firebaseapp.com",
+        //   databaseURL: "https://donationfb-1f4de-default-rtdb.asia-southeast1.firebasedatabase.app",
+        //   projectId: "donationfb-1f4de",
+        //   storageBucket: "donationfb-1f4de.appspot.com",
+        //   messagingSenderId: "235996284087",
+        //   appId: "1:235996284087:web:7d88122d8dbf21d7cbb932",
+        //   measurementId: "G-N76XL3EEQT"
+        // };
+        const firebaseConfig = {
+            apiKey: "AIzaSyDspE4T3V9pio8LwYTj5T9b9ZZTbSJ9qpk",
+            authDomain: "donationcharity-9ff1c.firebaseapp.com",
+            projectId: "donationcharity-9ff1c",
+            storageBucket: "donationcharity-9ff1c.appspot.com",
+            messagingSenderId: "349673548057",
+            appId: "1:349673548057:web:359500db715e19c8353d88",
+            measurementId: "G-QSGRYSRV57"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        document.getElementById('login').addEventListener('click',GoogleLogin);
+        function GoogleLogin(){
+            console.log("Login tbn call")
+            // let base_proveider=new GoogleAuthProvider()
+            // signInWithPopup(base_proveider).then(res=>{
+            //     console.log(res);
+            // }).catch(e=>{
+            //     console.log(e);
+            // })
+            const provider = new GoogleAuthProvider();
+            provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+            const auth = getAuth();
+            auth.languageCode = 'it';
+            provider.setCustomParameters({
+            'login_hint': 'user@example.com'
+            });
+            signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // The signed-in user info.
+                const user = result.user;
+                // ...
+                console.log(user.accessToken);
+                console.log(auth);
+                console.log(result);
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+        }
+
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

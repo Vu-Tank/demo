@@ -1,0 +1,36 @@
+[debug] [2021-10-04T10:15:55.376Z] ----------------------------------------------------------------------
+[debug] [2021-10-04T10:15:55.379Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\huynh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2021-10-04T10:15:55.379Z] CLI Version:   9.19.0
+[debug] [2021-10-04T10:15:55.380Z] Platform:      win32
+[debug] [2021-10-04T10:15:55.380Z] Node Version:  v16.9.1
+[debug] [2021-10-04T10:15:55.380Z] Time:          Mon Oct 04 2021 17:15:55 GMT+0700 (Indochina Time)
+[debug] [2021-10-04T10:15:55.380Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-04T10:15:55.545Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-04T10:15:55.546Z] > authorizing via signed-in user (vuhase141124@fpt.edu.vn)
+[debug] [2021-10-04T10:15:55.546Z] [iam] checking project donationfb-1f4de for permissions ["firebase.projects.get"]
+[debug] [2021-10-04T10:15:55.551Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-04T10:15:55.551Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-04T10:15:56.029Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 04 Oct 2021 10:15:56 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T10:15:56.042Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/donationfb-1f4de:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-10-04T10:15:57.318Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Oct 2021 10:15:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=818","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T10:15:57.325Z] > refreshing access token with scopes: []
+[debug] [2021-10-04T10:15:57.326Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-04T10:15:57.779Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 04 Oct 2021 10:15:58 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T10:15:57.806Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de [none]
+[debug] [2021-10-04T10:15:58.543Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de 200
+[debug] [2021-10-04T10:15:58.544Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de {"projectId":"donationfb-1f4de","projectNumber":"235996284087","displayName":"DonationFB","name":"projects/donationfb-1f4de","resources":{"hostingSite":"donationfb-1f4de","realtimeDatabaseInstance":"donationfb-1f4de-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'C:\Users\huynh\OneDrive\Máy tính\demo'...
+[info] 
+[debug] [2021-10-04T10:15:58.558Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/donationfb-1f4de/sites 
+[debug] [2021-10-04T10:16:00.050Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/donationfb-1f4de/sites 200
+[debug] [2021-10-04T10:16:00.050Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/donationfb-1f4de/sites {"sites":[{"name":"projects/235996284087/sites/donationfb-1f4de","defaultUrl":"https://donationfb-1f4de.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2021-10-04T10:16:00.050Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de/webApps/-/config [none]
+[debug] [2021-10-04T10:16:01.584Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de/webApps/-/config 200
+[debug] [2021-10-04T10:16:01.586Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/donationfb-1f4de/webApps/-/config {"projectId":"donationfb-1f4de","appId":"1:235996284087:web:7d88122d8dbf21d7cbb932","databaseURL":"https://donationfb-1f4de-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"donationfb-1f4de.appspot.com","apiKey":"AIzaSyCuYCEWTE5b9fNyLVbRRLM57GD-My79h-Y","authDomain":"donationfb-1f4de.firebaseapp.com","messagingSenderId":"235996284087","measurementId":"G-N76XL3EEQT"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
